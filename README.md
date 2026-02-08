@@ -26,4 +26,5 @@ For commercial use please contact the author at gallios@chem.auth.gr.<br>
 
 ## Contact
 Please report bugs to **gallios@chem.auth.gr**. Please in your email use **title:McCabe Simulator**
+<img width="701" height="513" alt="ggMcCabeSim" src="https://github.com/user-attachments/assets/0868324e-9db6-4d58-a50f-66acc4665a79" />
 
