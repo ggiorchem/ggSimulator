@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>McCabe-Thiele Simulator Help</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        h1, h2, h3 { color: #333; }
+        ul, ol { margin-left: 20px; }
+        code { background: #f4f4f4; padding: 2px 4px; font-family: Consolas, monospace; }
+        pre { background: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .toc { background: #f9f9f9; padding: 10px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>McCabe-Thiele Simulator - Help Documentation</h1>
+    <p><strong>Version</strong>: 1.0 <br>
+       <strong>Author</strong>: Professor George Gallios, Aristotle University of Thessaloniki, School of Chemistry, Email:gallios@chem.auth.gr .<br>
+       <strong>Purpose</strong>: This application is a graphical tool for simulating and visualizing McCabe-Thiele diagrams,
+       used in the design and analysis of binary distillation systems. Simulates a distillation column with partial condenser and full reboiler.
+       <ul><li>You can create (and save) VLE curves giving the volatility OR Load real VLE data from text files.</li>
+	   <li>You can calculate <strong>Nmin</strong> and <strong>Rmin</strong> for a given system.</li>
+       <li>You can <strong>calculate Rmin</strong> and <strong><em>optimize N, L and V</em></strong> by changing the R value.</li>
+       <li>You can create and save <strong>Hires colorful images</strong> of Mc-Thiele diagrams for specific problems <em>(including pinch lines)</em>.</li>
+
+       <li><strong>Note</strong>: The program is <strong>free</strong> to use for <strong>NON-commercial</strong> purposes. For commercial use please <strong>contact the author</strong>.</li></Ul>
+       <strong>Acknowledgment</strong>: If you like the program and want to thank the author reference his scientific work.
+       </p>
+
+    <h2 class="toc">Table of Contents</h2>
+    <ul>
+        <li><a href="#overview">Overview</a></li>
+		<li><a href="#example">Example Workflow</a></li>
+		<li><a href="#tips">Useful Tips</a></li>
+        <li><a href="#requirements">System Requirements</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#usage">Usage Instructions</a></li>
+        <li><a href="#config">Configuration File</a></li>
+        <li><a href="#troubleshooting">Troubleshooting</a></li>
+        <li><a href="#limitations">Limitations</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <h2 id="overview">Overview</h2>
+    <p>The McCabe-Thiele Simulator allows users to:</p>
+    <ul>
+        <li>Load phase equilibria data (VLE data)</li>
+        <li>Input distillation parameters (e.g., feed composition, distillate and bottoms compositions, reflux ratio, etc.).</li>
+        <li>Plot equilibrium curves, operating lines (upper and lower), and q-lines.</li>
+        <li>Perform step-by-step McCabe-Thiele constructions to visualize theoretical stages.</li>
+        <li>Calculate pinch points, minimum reflux ratio, and other key distillation parameters.</li>
+        <li>Save and load data, configure plot parameters, and export plots as images.</li>
+        <li>You can Save the diagram as hi-res image at any point. </li>
+    </ul>
+
+    <h2 id="example">Example Workflow</h2>
+    <ol>
+        <li>Start the application.</li>
+        <li>Enter parameters (e.g., xF = 0.4, xD = 0.95, xW = 0.05, q = 1.0, R = 3.0, vol_a = 2.5).<br>
+		You can either give volatility OR load real VLE data from a text file (vol_a becomes 0).</li>
+        <li>Click <strong>Plot all</strong> to generate the McCabe-Thiele diagram (all at once).</li>
+        <li>Use <strong>Start then Step</strong> to visualize step by step construction with instructions.<br>
+		Finally it calculates <strong>Nfeed, Nth, V and L.</strong>.</li>
+        <li>Click <strong>Pinch Line</strong> (multiple clicks) to analyze pinch points and calculate <strong>Rmin, qmin</strong> (3 senarios).</li>
+        <li>Save the plot (in Hires, publication quality) via <strong>Plot &gt; Save Image</strong> or Button Save Image at various image formats.</li>
+        <li>View results in the text area (e.g., number of stages, feed stage).</li>
+        <li><strong>Copy text</strong> from results window (with mouse) to notepad or other apps for further processing (print, compare, etc).</li>
+        <li>Once <strong>Rmin</strong> is calculated (with Pinch line) you can <strong><em>change the value of R</strong></em> <span style="color: blue;"><strong>[in range (1.5-2.5)*Rmin]</strong></span><br>
+            to <strong>minimize N, L and V for optimum performance</strong>.</li>
+		<li>If <strong>ShowText</strong> in problem is <strong>1</strong>, Text (input data and results) will be shown in the plot.<br>
+		If <strong>Bold</strong> is <strong>1</strong>, the text will show in <strong>bold.</strong></li>
+    </ol>
+
+	<h2 id="tips">Useful Tips</h2>
+	<ol>
+	<li>To calculate <strong>Nmin</strong> and <strong>Rmin</strong>
+	<p><strong>Nmin</strong> is calculated in <strong>Total Reflux</strong> mode.<br>
+	The line passing from <strong>pinch</strong> point (cross of q line with VLE) and <strong>(xD, xD)</strong> crosses Y axis at <strong>(xD/(Rmin+1)</strong>.
+	<ul><li>Setup problem. Type 1 to ShowText to show text in plot.</li>
+	<li>Click Total Reflux</li>
+	<li>Click Plot All ==> Nthe is Nmin</li>
+	<li>Click Pinch twice (calculates Rmin)</li>
+	<li>Click Save Image if you want to save Hires Image with solution.</li>
+	</ul></ol>
+
+
+    <h2 id="requirements">System Requirements</h2>
+    <ul>
+        <li><strong>Operating System</strong>: Windows 10 or newer with HD graphics.</li>
+    </ul>
+
+    <h2 id="installation">Installation</h2>
+    <ol>
+        <li>Just Run the standalone program. It will create configuration and help files in current dir. </li>
+    </ol>
+
+    <h2 id="features">Features</h2>
+    <h3>1. Graphical Interface</h3>
+    <ul>
+        <li>A Tkinter-based GUI with a left panel for input and controls and a right panel for Matplotlib plots.</li>
+        <li>Menu bar with options for file operations, plotting, and help.</li>
+        <li>Interactive buttons for plotting, updating parameters, and performing stepwise calculations.</li>
+    </ul>
+    <h3>2. Input Parameters</h3>
+    <ul>
+        <li><strong>xF</strong>: Feed composition (mole fraction of more volatile component).</li>
+        <li><strong>xD</strong>: Distillate composition.</li>
+        <li><strong>xW</strong>: Bottoms composition.</li>
+        <li><strong>q</strong>: Thermal condition of the feed (q = 1 for saturated liquid, q = 0 for saturated vapor).</li>
+        <li><strong>R</strong>: Reflux ratio.</li>
+        <li><strong>vol_a</strong>: Relative volatility of the binary mixture. If you change it the equilibrium data are recalculated based in current value.<br>
+		A value of <strong>0</strong> means VLE data were loaded from disk.</li>
+		<li><strong>Eff_cf</strong>: (0-1) Tray efficiency coefficient (Murphee). Using it you calculate the actual trays needed and the actual Feed tray.</li>
+		<li><strong>ShowText</strong>: (0/1). If 1 will show text in plot window. Text will be saved with Image.</li>
+		<li><strong>Bold</strong>: (0/1). If 1 the text in plot will be <strong>bold</strong>.</li>
+    </ul>
+    <h3>3. Plotting Capabilities</h3>
+    <ul>
+        <li><strong>Equilibrium Curve</strong>: Plots the equilibrium relationship based on relative volatility.</li>
+        <li><strong>Operating Lines</strong>: Upper Operating Line (UOL) and Lower Operating Line (LOL).</li>
+        <li><strong>q-line</strong>: Represents the feed condition.</li>
+        <li><strong>Pinch Points</strong>: Identifies pinch points for minimum reflux calculations.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;(if Pinch line seems <strong>wrong</strong> press <strong>[Shift][Alt] a</strong> to change fitting parameter <strong><em>curve_init</em></strong>.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Try values: 0.5 or 0.7 or 0.2 then Plot again and Pinch).</li>
+        <li><strong>Stepwise Construction</strong>: Visualizes theoretical stages for distillation.<br>
+		Click once in Start button and then multiple times in Step Button.</li>
+    </ul>
+    <h3>4. File Operations</h3>
+    <ul>
+        <li><strong>Load Data</strong>: Import equilibrium data from a text file.</li>
+        <li><strong>Save Data</strong>: Save equilibrium data to a text file.</li>
+        <li><strong>Save Image</strong>: Export the plot as PNG, JPEG, TIFF, PDF, or SVG.</li>
+        <li><strong>Load/Save Problem Data</strong>: Load/Save problem data (and current plot parameters) to a text data file (.dat).</li>
+        <li><strong>Configuration File</strong>: Saves the current problem and plot parameters to a config file<br>
+		<code>gMcCabe-config.ini</code>. This file will be loaded <strong>automatically</strong> on every program execution.</li>
+    </ul>
+    <h3>5. Interactive Features</h3>
+    <ul>
+        <li>Step-by-step plotting of McCabe-Thiele stages.</li>
+        <li>Pinch point analysis for minimum reflux ratio.</li>
+        <li>Total reflux mode for minimum stage calculations.</li>
+        <li><strong>Fit Volatility</strong>: (in Plot menu) Calculates volatility from loaded xydata. It is needed for FUG results.</li>
+        <li>When volatility, a, is zero is fitted from data before FUG results.</li>
+        <li>Customizable plot parameters (e.g., title, axis labels, colors, grid settings).</li>
+
+    </ul>
+
+    <h2 id="usage">Usage Instructions</h2>
+    <h3>1. Launching the Application</h3>
+    <p>Run the standalone exe file to open the GUI window titled "McCabe-Thiele Simulator - (c) G. Gallios". The window is divided into:</p>
+    <ul>
+        <li><strong>Left Frame</strong>: Contains input fields, buttons, checkboxes, and a text output area.</li>
+        <li><strong>Right Frame</strong>: Displays the Matplotlib plot. It has full zoom and pan capabilities using the matplotlib toolbar.</li>
+    </ul>
+    <h3>2. Entering Problem Parameters</h3>
+    <p>In the left frame, input values for <code>xF</code>, <code>xD</code>, <code>xW</code>, <code>q</code>, <code>R</code>, and <code>vol_a</code>.</p>
+    <ul>
+        <li>Default values are provided (e.g., xF = 0.30, xD = 0.90, xW = 0.10, q = 1.0, R = 3.5, vol_a = 2.5).</li>
+        <li>Vol_a = 0 --> means xydata have been loaded. </li>
+        <li>Click <strong>Update</strong> to save changes or <strong>Plot all</strong> to plot the McCabe-Thiele diagram.</li>
+    </ul>
+    <h3>3. Plotting Options</h3>
+    <ul>
+        <li><strong>Axis</strong>: Plots the axes with customizable grid and labels.</li>
+        <li><strong>Equilibrium Curve</strong>: Plots the equilibrium curve based on relative volatility or loaded data.</li>
+        <li><strong>McCabe-Thiele</strong>: Performs the full McCabe-Thiele construction, including operating lines and stages.</li>
+        <li><strong>Pinch Line</strong>: Calculates and displays pinch points for minimum reflux analysis.</li>
+        <li><strong>Parameters</strong>: Adjust plot settings (e.g., Plot title, Axis labels, colors, font sizes, grid visibility). Please give correct values (strings or numbers). Error checking is minimum.</li>
+    </ul>
+    <h3>4. Stepwise Construction</h3>
+    <ul>
+        <li>Select <strong>Plot &gt; Plot McCabe-Thiele</strong> or click <strong>Start</strong> in the left frame to begin.</li>
+        <li>Click <strong>Step</strong> to draw each stage incrementally.</li>
+        <li>Results (e.g., number of stages, feed stage) are displayed in the text area.</li>
+    </ul>
+    <h3>5. Checkboxes</h3>
+    <ul>
+        <li><strong>Clear text</strong>: Clears the text output area before new outputs.
+        <br>If it is <strong>NOT checked</strong> the new results are appended to the end.<br>
+        The data from results window can be copied to clipboard and other window apps.</li>
+        <li><strong>Total Reflux</strong>: Simulates total reflux conditions (infinite reflux ratio).<br></li>
+        <li><strong>Show Info</strong>: When <strong>checked</strong> gives instructions in step by step McCabe-Thiele construction.</li>
+    </ul>
+    <h3>6. Results</h3>
+    <p>The text area displays:</p>
+    <ul>
+        <li>Input parameters.</li>
+        <li>Calculated results (e.g., number of stages, feed stage, minimum reflux ratio).</li>
+        <li>Pinch point coordinates and q-line information.</li>
+    </ul>
+
+    <h2 id="config">Configuration File</h2>
+    <ul>
+        <li><strong>File</strong>: <code>gMcCabe-config.ini</code></li>
+        <li><strong>Purpose</strong>: Stores problem parameters and plot settings to be loaded automatically.</li>
+        <li><strong>Structure</strong>:
+            <pre><code>[problem]
+xF = 0.30
+xD = 0.90
+xW = 0.10
+q = 1.0
+R = 3.5
+vol_a = 2.5
+
+[plot_parameters]
+title = Benzene - Toluene Equilibrium Curve
+xlabel = Liquid Phase Mole Fraction (x)
+ylabel = Vapor Phase Mole Fraction (y)
+title fs = 18
+...
+</code></pre>
+        </li>
+        <li><strong>Usage</strong>:
+            <ul>
+                <li>Automatically loaded at startup if present.</li>
+                <li>Modified via <strong>File ==&gt; Save config Data</strong>. You may set parameters first with  <strong>Plot ==&gt; Plot parameters</strong>.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2 id="troubleshooting">Troubleshooting</h2>
+    <ul>
+        <li><strong>Error: "Input must be a numeric value"</strong>:
+            <ul>
+                <li>Ensure all input fields (<code>xF</code>, <code>xD</code>, <code>xW</code>, <code>q</code>, <code>R</code>, <code>vol_a</code>) contain valid numbers.</li>
+            </ul>
+        </li>
+        <li><strong>Plot not updating</strong>:
+            <ul>
+                <li>Click <strong>Update</strong> before plotting or use <strong>Plot all</strong>.</li>
+            </ul>
+        </li>
+        <li><strong>Pinch analysis not working</strong>:
+            <ul>
+                <li>Pinch points are not calculated in total reflux mode.</li>
+                <li>Ensure valid input parameters (e.g., <code>xF</code> between <code>xW</code> and <code>xD</code>).</li>
+        <li>If Pinch line seems <strong>wrong</strong> (It may happen in extreme q values)<br>
+        press <strong>[Shift][Alt] a</strong> to change fitting parameter <strong><em>curve_init</em></strong>.<br>
+        (Try values: 0.5 or 0.7 or 0.2 then Plot again and Pinch).</li>
+
+            </ul>
+        </li>
+        <li><strong>File loading issues</strong>:
+            <ul>
+                <li>Data files must contain x, y pairs (tab, space, comma, or semicolon-separated) within [0,1].</li>
+                <li>Comments in data files should start with <code>#</code>.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2 id="limitations">Limitations</h2>
+    <ul>
+        <li>The application assumes a binary mixture with constant relative volatility.</li>
+        <li>The GUI may not scale well on very high-resolution displays.</li>
+        <li>Error handling is basic. If you find an error please notify the author my email.</li>
+    </ul>
+
+    <h2 id="contact">Contact</h2>
+    <ul>
+        <li>
+    <p><strong>Professor George Gallios</strong> at Aristotle University of Thessaloniki, School of Chemistry, Greece, <br>
+    <strong>email</strong>: gallios@chem.auth.gr (use <strong>title</strong>: McCabe-Thiele Simulator) </p></li>
+    </ul>
+
+    <hr>
+    <p><em>End of Help Documentation. Version 1.0 | Generated on Jan. 06, 2026
+    &nbsp;<span style="margin-left: 150px;">(w10-72)</em></span></p>
+</body>
+</html>
