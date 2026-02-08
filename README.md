@@ -1,7 +1,9 @@
 # ggMcCabeSim
 
-**ggMcCabeSim** is a standalone McCabe-Thiele Simulator for binary system distillation distributed as a Windows executable.  
-This repository provides the compiled program for Win-10 64 bit or later  (`ggMcCabeSim.exe`) and a local help file (`ggMcCabeSim_help.html`) for users who want to download and run the tool immediately.
+**ggMcCabeSim** is a standalone McCabe-Thiele Simulator for distillation column design for binary systems.<br> 
+It is distributed as a Windows executable, so users can download it and run it immediately.<br>
+This repository provides the compiled program (<strong>ggMcCabeSim.exe</strong>) for Win-10 64 bit or later.<br> 
+A local help file (<strong>ggMcCabeSim_help.html</strong>) is also given for users who want to see what the program does.
 
 ## Contents
 - `ggMcCabeSim.exe` — the main executable for McCabe-Thiele Simulator  
@@ -13,8 +15,8 @@ Download `gMcCabeSim.part1.exe`, 'gMcCabeSim.part2.rar' and 'gMcCabeSim.part3.ra
 Refer to `ggMcCabeSim_help.html` for detailed explanations of features, input formats, and examples.
 
 ## License
-The program is free to use for NON-commercial purposes. 
-For commercial use please contact the author at gallios@chem.auth.gr. 
+The program is <strong>free</strong> to use for <strong>NON-commercial purposes</strong>. 
+For commercial use please contact the author at gallios@chem.auth.gr.<br>
 (c) Copyright owner is Prof.George Gallios, “all rights reserved”.
 
 ## Contact
