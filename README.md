@@ -5,7 +5,8 @@ It is distributed as a Windows executable, so users can download it and run it i
 This repository provides the compiled program (<strong>ggMcCabeSim.exe</strong>) for Win-10 64 bit or later.<br> 
 A local help file (<strong>ggMcCabeSim_help.html</strong>) is also given for users who want to see what the program does.
 
-<img width="701" height="513" alt="ggMcCabeSim" src="https://github.com/user-attachments/assets/0868324e-9db6-4d58-a50f-66acc4665a79" />
+<img width="701" height="513" alt="ggMcCabeSim2" src="https://github.com/user-attachments/assets/ae8715ca-b78e-4ada-87d7-deb4934f7520" />
+
 
 **Keywords:**
 Simulation, McCabe-Thiele, distillation column, binary distillation, column design
