@@ -29,6 +29,6 @@ For commercial use please contact the author at gallios@chem.auth.gr.<br>
 (c) Copyright owner is Professor George Gallios, “all rights reserved”.
 
 ## Contact
-Please report bugs to **gallios@chem.auth.gr**. Please in your email use **title:McCabe Simulator**
+Please report bugs to **gallios@chem.auth.gr**. When you send email please use **title: McCabe Simulator**
 
 
