@@ -1,4 +1,4 @@
-# ggMcCabeSim
+# McCabe-Thiele Simulator for distillation column design of binary systems by George Gallios.
 
 **ggMcCabeSim** is a standalone McCabe-Thiele Simulator for distillation column design for binary systems.<br> 
 It is distributed as a Windows executable, so users can download it and run it immediately.<br>
