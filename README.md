@@ -15,9 +15,8 @@ Refer to `ggMcCabeSim_help.html` for detailed explanations of features, input fo
 ## License
 The program is free to use for NON-commercial purposes. 
 For commercial use please contact the author at gallios@chem.auth.gr. 
-If you don’t add a license, GitHub treats the project as “all rights reserved” by default.
+(c) Copyright owner is Prof.George Gallios, “all rights reserved”.
 
 ## Contact
-If users should report bugs or request features, add an email or GitHub Issues link here.
-gallios@chem.auth.gr
+Please report bugs to gallios@chem.auth.gr
 
